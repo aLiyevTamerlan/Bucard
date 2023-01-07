@@ -1,0 +1,111 @@
+#register {
+  background-color: var(--colorPrimary);
+}
+
+#register h4 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 24px;
+}
+
+#register span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.register__left {
+  height: 100vh;
+  padding: 60px 150px;
+  background-color: #fff;
+}
+
+.register__left a {
+  color: var(--colorPrimary);
+}
+
+#register .password__eye {
+  bottom: 46px;
+  right: 16px;
+}
+
+.password__eye:hover {
+  cursor: pointer;
+}
+
+.register__right {
+  height: 100vh;
+}
+.frame {
+  width: 100%;
+  object-fit: cover;
+}
+.register__right p {
+  color: hsla(219, 100%, 96%, 1);
+}
+
+.success_error {
+  width: 216px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 32px;
+}
+
+.account__type .btn {
+  margin: 0;
+  padding: 0;
+}
+
+.type__google {
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid rgba(35, 31, 32, 0.12);
+  border-radius: 4px;
+}
+
+.type__meta {
+  padding: 10px 20px;
+  background: #1877f2;
+  color: #fff;
+  border-radius: 4px;
+}
+
+#field::placeholder {
+  color: black;
+}
+
+.fields {
+  display: none;
+  position: absolute;
+  border: 0.5px solid black;
+  padding: 2px;
+  border-top: 0;
+  top: 100%;
+  width: 100%;
+  max-height: 200px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  overflow-y: auto;
+  background-color: white;
+  z-index: 10;
+}
+
+.inline {
+  display: inline;
+}
+
+.list {
+  padding: 5px 4px;
+}
+
+.list:hover {
+  cursor: pointer;
+  background: #1877f2;
+  color: white;
+  transition: all 0.5ms;
+  border-radius: 3px;
+}
+
+.error-input {
+  border-color: #dc3545;
+}

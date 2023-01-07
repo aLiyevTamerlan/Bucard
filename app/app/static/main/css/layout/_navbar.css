@@ -1,0 +1,16 @@
+.navbar {
+  height: 100%;
+}
+.navbar ul {
+  width: auto;
+  height: 100%;
+}
+/* .nav_item{
+    } */
+.nav_link {
+  white-space: nowrap;
+  color: var(--colorTextPrim);
+}
+.nav_item:hover .nav_link {
+  color: var(--colorPrimary);
+}

@@ -1,0 +1,16 @@
+@import "./abstracts/_variables.css";
+@import "./abstracts/_classes.css";
+@import "./responsivity/_responsivity.css";
+@import "./base/_reset.css";
+@import "./layout/_header.css";
+@import "./layout/_footer.css";
+@import "./layout/_navbar.css";
+@import "./layout/_forms.css";
+@import "./pages/_home.css";
+@import "./pages/_dashboard.css";
+@import "./pages/_personal.css";
+@import "./pages/_login.css";
+@import "./pages/_register.css";
+@import "./pages/_coming_soon.css";
+@import "./pages/_search.css";
+@import "./pages/_results.css";

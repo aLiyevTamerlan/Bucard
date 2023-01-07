@@ -1,0 +1,12 @@
+{
+  "name": "buca_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "yarn tailwindcss -i ./app/app/static/main/css/tailwind.css -o ./app/app/static/main/css/style.css --watch",
+    "prod": "yarn tailwindcss -i ./app/app/static/main/css/tailwind.css -o ./app/app/static/main/css/style-minify.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}

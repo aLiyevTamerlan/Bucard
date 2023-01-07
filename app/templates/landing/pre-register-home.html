@@ -1,0 +1,2098 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="{% static 'main/assets/favicon.svg' %}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucard - Home page</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="mx-auto overflow-x-hidden font-medium text-secondary overscroll-contain"
+  >
+    <header class="flex justify-center py-2 mx-auto">
+      <div
+        class="flex justify-between w-11/12 md:fixed z-50 sm:px-14 py-[26px] md:bg-opacity-75 items-center rounded-2xl md:backdrop-blur-2xl bg-white"
+      >
+        <div class="cursor-pointer">
+          <a href="" class="logo"
+            ><img
+              src="{% static 'main/assets/images/buca_logo.svg' %}"
+              alt="Bucard Logo"
+          /></a>
+        </div>
+        <nav>
+          <ul class="flex gap-8 font-normal">
+            <li class="hidden md:block">
+              <a href="#whyBuca">{% blocktranslate %}Buca nədir?{% endblocktranslate %}</a>
+            </li>
+            <li class="hidden md:block">
+              <a href="#pricing">{% blocktranslate %}Paketlər{% endblocktranslate %}</a>
+            </li>
+            <li class="hidden md:block">
+              <a href="#contact">{% blocktranslate %}Əlaqə{% endblocktranslate %}</a>
+            </li>
+            <li class="cursor-pointer lang-btn">
+              <img src= "{% static 'main/assets/icons/az_flag.svg' %}" alt="" />
+          </li>
+          <div
+              class="language w-44 absolute hidden font-normal p-6 rounded-md border z-50 bg-white border-secondary border-opacity-[0.06] top-16 right-10 space-y-8 transition-all animate-down lang-dropdown">
+               <a  href="#/" id="AZ" data-language="az" class="flex gap-3 cursor-pointer w-fit">
+                  <img src="{% static 'main/assets/icons/az_flag.svg' %}" alt="" />Azerbaijani
+              </a>
+              <a  href="#/" id="EN" data-language="en" class="flex gap-3 cursor-pointer w-fit">
+                  <img src="{% static 'main/assets/icons/en_flag.svg' %}" alt="" />English
+              </a>
+              <a  href="#/" id="RU" data-language="ru" class="flex gap-3 cursor-pointer w-fit">
+                  <img src="{% static 'main/assets/icons/ru_flag.svg' %}" alt="" />Russian
+              </a>   
+          </div>
+          </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main class="mt-4 md:mt-24">
+      <section id="hero" class=" lg:py-16">
+        <img
+          src="{% static 'main/assets/images/hero_background.svg' %}"
+          class="absolute top-0 -z-10"
+          alt=""
+        />
+        <div
+          class="flex flex-col items-center justify-between w-11/12 mx-auto lg:flex-row sm:px-14"
+        >
+          <div class="lg:w-1/2 overscroll-contain">
+            <h1
+              class="font-bold text-center lg:text-start text-4xl md:text-5xl xl:text-[56px] title mb-4 lg:mb-6"
+            >
+            {% blocktranslate %}Bucard - biznes şəbəkəni yarat!{% endblocktranslate %}
+            </h1>
+            <p
+              class="text-sm font-normal text-center heroContent lg:text-start text-text-black md:mb-6 md:text-base"
+            >
+            {% blocktranslate %}Get started with a Free plan or start 14 days Free Trial with any
+              of the paid plans.{% endblocktranslate %}
+            </p>
+            <a href="{% url 'pre_register' %}">
+              <button
+                class="max-w-xs mx-auto my-10 btn-register lg:mb-12 md:max-w-none md:mx-0"
+              >
+              {% blocktranslate %}Qeydiyyatdan keç{% endblocktranslate %} /<span class="italic font-medium"
+                  >{% blocktranslate %}Ödənişsiz!{% endblocktranslate %}</span
+                >
+              </button>
+            </a>
+            
+            <div
+              class="flex-col items-center hidden mt-4 mb-10 lg:mt-0 features lg:items-start lg:flex"
+            >
+              <p
+                class="w-full pb-6 text-sm font-normal text-center text-text-black lg:text-start lg:text-base lg:w-5/6 xl:w-1/2 content"
+              >
+              {% blocktranslate %}Will be available on Google Play Market and App Store soon{% endblocktranslate %}
+              </p>
+              <div class="flex gap-5 images">
+                <img
+                  src="{% static 'main/assets/images/apple_store.svg' %}"
+                  alt="Download App Store"
+                />
+                <img
+                  src="{% static 'main/assets/images/google_play.svg' %}"
+                  alt="Download Google Play"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-end gap-8 lg:flex-row">
+            <img
+              class="w-96 lg:w-96 xl:w-[466]"
+              src="{% static 'main/assets/images/hero_img.png' %}"
+              alt=""
+            />
+            <div
+            class="flex flex-col items-center mt-4 mb-10 features lg:items-start lg:hidden"
+          >
+            <p
+              class="w-full pb-3 text-sm font-normal text-center text-text-black lg:text-start lg:text-base lg:w-5/6 xl:w-1/2 content"
+            >
+            {% blocktranslate %}Will be available on Google Play Market and App Store soon{% endblocktranslate %}
+            </p>
+            <div class="flex gap-5 mt-4 images">
+              <img
+                src="{% static 'main/assets/images/apple_store.svg' %}"
+                alt="Download App Store"
+              />
+              <img
+                src="{% static 'main/assets/images/google_play.svg' %}"
+                alt="Download Google Play"
+              />
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section id="whyBuca" class="relative mt-8 bg-profile">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 w-11/12 h-[576px] sm:px-14 mx-auto pt-14 pb-9"
+        >
+          <div>
+            <h2 class="title font-bold text-2xl md:text-[32px] mb-8">
+              {% blocktranslate %}Buca nədir?{% endblocktranslate %}
+            </h2>
+            <div class="flex items-center w-full border-collapse">
+              <button
+                class="w-full px-6 py-3.5 text-sm text-white transition-all sm:px-8 sm:py-2.5 bg-primary sm:text-base btn-personal lg:w-fit animate-fadeIn"
+              >
+              {% blocktranslate %}Personal{% endblocktranslate %}
+              </button>
+              <button
+                class="sm:pl-[34px] px-5 bg-white text-primary whitespace-nowrap text-sm sm:text-base sm:pr-8 py-3.5 sm:py-2.5 btn-business stroke-primary w-full lg:w-fit duration-300 transition-all animate-fadeIn"
+              >
+                <span>
+                  <svg
+                    class="w-5 sm:w-6"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.1997 9.5L12.9997 13.7L11.3997 11.3L8.19971 14.5"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.1992 9.5H17.1992V11.5"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.7002 22H15.7002C20.7002 22 22.7002 20 22.7002 15V9C22.7002 4 20.7002 2 15.7002 2H9.7002C4.7002 2 2.7002 4 2.7002 9V15C2.7002 20 4.7002 22 9.7002 22Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                {% blocktranslate %}Bucard Business{% endblocktranslate %}
+              </button>
+            </div>
+            <div class="flex flex-col">
+              <div class="transition-all whybucard-content animate-fadeIn">
+                <ul class="py-12 space-y-6 font-normal text-text-black">
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Məkan və vəzifəyə görə axtarış{% endblocktranslate %}
+                  </li>
+
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Şirkət və şəxslərlə virtual tanışlıq{% endblocktranslate %}
+                  </li>
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Özünün və ya şirkətinin rahat şəkildə tanıtımı{% endblocktranslate %}
+                  </li>
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Rahat və asan kommunikasiya{% endblocktranslate %}
+                  </li>
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Netvorkinq{% endblocktranslate %}
+                  </li>
+                </ul>
+                <!-- <button class="btn-register">
+                                Qeydiyyatdan keç /<span class="italic font-medium">Ödənişsiz!</span>
+                            </button> -->
+              </div>
+              <div
+                class="hidden transition-all whybucard-content animate-fadeIn"
+              >
+                <ul class="py-12 space-y-6 font-normal text-text-black">
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Biznesin tanıtımı{% endblocktranslate %}
+                  </li>
+
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Kriteriyalar əsasında əməkdaş axtarışı{% endblocktranslate %}
+                  </li>
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Biznes partnyorluğunun yaradılması{% endblocktranslate %}
+                  </li>
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Davamlı və dinamik inkişaf{% endblocktranslate %}
+                  </li>
+                  <li class="flex gap-4">
+                    <span class="check-box">
+                      <svg
+                        width="15"
+                        height="11"
+                        viewBox="0 0 15 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.83852 10.032C5.45142 10.032 5.06433 9.87719 4.75465 9.56751L1.65788 6.47073C1.03852 5.85138 1.03852 4.92235 1.65788 4.30299C2.27723 3.68364 3.28368 3.68364 3.82562 4.30299L5.83852 6.31589L10.9482 1.20622C11.5676 0.58686 12.4966 0.58686 13.1159 1.20622C13.7353 1.82557 13.7353 2.7546 13.1159 3.37396L6.92239 9.56751C6.61271 9.87719 6.22562 10.032 5.83852 10.032Z"
+                          fill="#1BC5BD"
+                          stroke="#D0EFF4"
+                        />
+                      </svg>
+                    </span>
+                    {% blocktranslate %}Asan və sürətli kommunikasiya{% endblocktranslate %}
+                  </li>
+                </ul>
+                <!-- <button class="bg-transparent btn-register">
+                                Qeydiyyatdan keç /<span class="italic font-medium">Ödənişsiz!</span>
+                            </button> -->
+              </div>
+            </div>
+          </div>
+          <div class="flex mt-8 lg:mt-0 2xl:justify-end">
+            <img
+            class="absolute left-0 hidden w-full transition-all sm:block whybucad-img lg:top-0 lg:left-auto lg:w-auto animate-fadeIn"
+            src="{% static 'main/assets/images/personal_image.svg' %}"
+            alt=""
+            />
+            <img
+              class="absolute left-0 hidden w-full transition-all whybucad-img lg:top-0 lg:left-auto lg:w-auto animate-fadeIn"
+              src="{% static 'main/assets/images/business_image.svg' %}"
+              alt=""
+            />
+            <img class="absolute left-0 w-full transition-all sm:hidden whybucad-img animate-fadeIn" src="{% static 'main/assets/images/personal_image-mob.png' %}" >
+            <img class="absolute left-0 hidden w-full transition-all sm:hidden whybucad-img animate-fadeIn" src="{% static 'main/assets/images/business_image-mob.png' %}" >
+          </div>
+        </div>
+      </section>
+      <section id="pricing" class="lg:mt-auto sm:mt-[75%] mt-[100%]">
+        <div
+          class="w-11/12 py-6 lg:py-[72px] sm:px-14 mx-auto flex justify-between flex-col"
+        >
+          <div class="flex flex-col justify-between mb-5 lg:flex-row">
+            <h2
+              class="w-64 mb-6 text-2xl font-bold whitespace-normal title md:text-3xl md:w-96 lg:mb-0 md:whitespace-nowrap lg:whitespace-normal"
+            >
+            {% blocktranslate %}Xəyalındakı biznes profilini yarat!{% endblocktranslate %}
+            </h2>
+            <div class="flex items-center border-collapse">
+              <button
+                class="w-full px-6 py-3.5 text-sm text-white transition-all duration-300 sm:px-8 sm:py-2.5 bg-primary sm:text-base btn-personal lg:w-fit animate-fadeIn"
+              >
+              {% blocktranslate %}Personal{% endblocktranslate %}
+              </button>
+              <button
+                class="sm:pl-[34px] px-5 bg-white text-primary whitespace-nowrap text-sm sm:text-base sm:pr-8 py-3.5 sm:py-2.5 btn-business stroke-primary w-full lg:w-fit transition-all duration-300 animate-fadeIn"
+              >
+                <span>
+                  <svg
+                    class="w-5 sm:w-6"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.1997 9.5L12.9997 13.7L11.3997 11.3L8.19971 14.5"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.1992 9.5H17.1992V11.5"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.7002 22H15.7002C20.7002 22 22.7002 20 22.7002 15V9C22.7002 4 20.7002 2 15.7002 2H9.7002C4.7002 2 2.7002 4 2.7002 9V15C2.7002 20 4.7002 22 9.7002 22Z"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                {% blocktranslate %}Bucard Business{% endblocktranslate %}
+              </button>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-1 gap-6 transition-all lg:grid-cols-3 lg:gap-4 pricing animate-fadeIn"
+          >
+            <div class="p-6 pt-8 text-white rounded h-fit bg-primary">
+              <div class="space-y-[18px] mb-6">
+                <h3 class="font-semibold text-2xl lg:text-[32px]">
+                  {% blocktranslate %}Free to start!{% endblocktranslate %}
+                </h3>
+                <p class="text-2xl lg:text-[32px]">0₼</p>
+                <p class="text-sm font-normal">{% blocktranslate %}Əlaqələri genişləndir{% endblocktranslate %}</p>
+              </div>
+              <div class="h-[1px] w-full bg-white mb-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#FFFFFF"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Buca Qutusu{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#FFFFFF"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İstifadəçi və şirkət axtarışı{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#FFFFFF"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kodu saxlanılır{% endblocktranslate %}
+                </li>
+              </ul>
+            </div>
+            <div
+              class="p-6 pt-8 border rounded h-fit border-opacity-10 border-primary"
+            >
+              <div class="mb-6 space-y-3">
+                <h3 class="text-base lg:text-lg text-primary">{% blocktranslate %}Standart{% endblocktranslate %}</h3>
+                <p class="text-2xl lg:text-[32px] flex gap-1 items-end">1.89₼ <span class="discount-text">{% blocktranslate %}per month{% endblocktranslate %}</span></p>
+                <p class="flex items-center gap-2">
+             
+                  {% blocktranslate %}Paid annually 18₼{% endblocktranslate %} 
+                  <span class="discount-badge">-10% {% blocktranslate %}off{% endblocktranslate %} </span>
+                </p>
+              </div>
+              <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Buca Qutusu{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İstifadəçi və şirkət axtarışı{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kodu saxlanılır{% endblocktranslate %}
+                </li>
+              </ul>
+              <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Özəl Hesab{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Profil linkini paylaşın{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kod paylaşımı{% endblocktranslate %}
+                </li>
+              </ul>
+            </div>
+            <div
+              class="p-6 pt-8 border rounded h-fit border-opacity-10 border-primary"
+            >
+              <div class="mb-6 space-y-3">
+                <h3 class="text-base lg:text-lg text-primary">Pro</h3>
+                <p class="text-2xl lg:text-[32px] flex gap-1 items-end">4.89₼<span class="discount-text">{% blocktranslate %}per month{% endblocktranslate %}</span></p>
+                <p class="flex items-center gap-2">
+            <span class="discount-text">         {% blocktranslate %}Paid annually 48₼{% endblocktranslate %}
+          </span>        <span class="discount-badge">-10% {% blocktranslate %}off{% endblocktranslate %}</span>
+                </p>
+              </div>
+              <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Buca Qutusu{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İstifadəçi və şirkət axtarışı{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kodu saxlanılır{% endblocktranslate %}
+                </li>
+              </ul>
+              <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Detallı Profil{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Profil linki paylaşın{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kod paylaşımı{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İşə alın{% endblocktranslate %}
+                </li>
+              </ul>
+              <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Açar sözlər{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İctimai hesab{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Şəxsi portfeli{% endblocktranslate %}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="grid hidden grid-cols-1 gap-6 transition-all lg:grid-cols-3 lg:gap-4 pricing animate-fadeIn"
+          >
+            <div class="hidden rounded lg:block">
+              <img class="w-full bg-cover" src="{% static 'main/assets/images/pricing.svg' %}" alt="" />
+            </div>
+            <div
+              class="p-6 pt-8 border rounded border-opacity-10 border-primary h-fit"
+            >
+              <div class="mb-6 space-y-3 ">
+                <h3 class="text-base lg:text-lg text-primary">{% blocktranslate %}Business{% endblocktranslate %}</h3>
+                <p class="text-2xl lg:text-[32px] flex gap-1 items-end">8.89₼<span class="discount-text">{% blocktranslate %}per month{% endblocktranslate %}</span></p>
+                <p class="flex items-center gap-2">
+               <span class="discount-text">{% blocktranslate %}Paid annually 88₼{% endblocktranslate %}</span>
+                  <span class="discount-badge">-10% {% blocktranslate %}off{% endblocktranslate %}</span>
+                </p>
+              </div>
+              <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Buca Qutusu{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İstifadəçi və şirkət axtarışı{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kodu saxlanılır{% endblocktranslate %}
+                </li>
+              </ul>
+              <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Detallı Profil{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Profil linki paylaşın{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İctimai hesab{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}5 Məhsul linki{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}5 Xidmət Linki{% endblocktranslate %}
+                </li>
+              </ul>
+              <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İctimai yer{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Daha çox müştəri{% endblocktranslate %}
+                </li>
+                
+              </ul>
+            </div>
+            <div
+              class="p-6 pt-8 border rounded h-fit border-opacity-10 border-primary"
+            >
+              <div class="mb-6 space-y-3">
+                <h3 class="text-base lg:text-lg text-primary">{% blocktranslate %}Company{% endblocktranslate %}</h3>
+                <p class="text-2xl lg:text-[32px] flex gap-1 items-end">11.89₼<span class="discount-text">{% blocktranslate %}per month{% endblocktranslate %}</span></p>
+                <p class="flex items-center gap-2">
+              <span class="discount-text">{% blocktranslate %}Paid annually 118₼{% endblocktranslate %}</span>
+                  <span class="discount-badge">-10% {% blocktranslate %}off{% endblocktranslate %}</span>
+                </p>
+              </div>
+              <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Buca Qutusu{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İstifadəçi və şirkət axtarışı{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kodu saxlanılır{% endblocktranslate %}
+                </li>
+              </ul>
+              <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Detallı Profil{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Profil linki paylaşın{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}NFC / QR kod paylaşımı{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}İctimai hesab{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  <p class="flex gap-1">
+                    <span>{% blocktranslate %}10{% endblocktranslate %}</span> {% blocktranslate %}İctimai yer{% endblocktranslate %}
+                  </p>
+                </li>
+              </ul>
+              <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+              <ul class="mb-4 space-y-3">
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Şirkət kataloqunda siyahıya alınma{% endblocktranslate %}
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  <p class="flex gap-1">
+                    <span>{% blocktranslate %}B2B və B2C müştəriləri{% endblocktranslate %}
+                  </p>
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  <p class="flex gap-1">
+                    <span>{% blocktranslate %}Limitsiz Xidmət bağlantısı{% endblocktranslate %}
+                    xidmət
+                  </p>
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  <p class="flex gap-1">
+                    <span >{% blocktranslate %}Limitsiz Məhsul bağlantısı{% endblocktranslate %}
+                    xidmət
+                  </p>
+                </li>
+                <li class="flex items-center gap-4">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                        fill="#12DB63"
+                      />
+                      <mask
+                        id="mask0_805_10590"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="3"
+                        y="6"
+                        width="17"
+                        height="12"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                          fill="white"
+                        />
+                      </mask>
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Axtarış sistemində mövcud olmaq.{% endblocktranslate %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="relative flex w-11/12 mx-auto sm:px-14">
+          <div class="relative w-full p-5 text-white sm:p-6 lg:p-10 bg-primary rounded-xl">
+            <p class="w-full text-sm font-bold sm:text-base md:text-lg lg:text-2xl xl:text-3xl xl:w-1/2">
+              {% blocktranslate %}Ön qeydiyyat ilə fəaliyyətə </br> başlayan kimi ilk sən xəbərdar ol!{% endblocktranslate %}
+            </p>
+            <a href="{% url 'pre_register' %}"
+              ><button class="relative z-20 w-full px-1 py-3 mt-6 text-sm bg-white rounded text-primary sm:btn-register-white overlay-btn">
+                {% blocktranslate %}Qeydiyyatdan keç{% endblocktranslate %} /
+                <span class="italic font-medium">{% blocktranslate %}Ödənişsiz!{% endblocktranslate %}</span>
+              </button>
+            </a>
+          </div>
+          <img
+            src="{% static 'main/assets/images/cta.svg' %}"
+            alt="cta"
+            class="absolute top-0 object-cover object-left w-full h-full sm:w-fit sm:right-0 -right-20 "
+            srcset=""
+          />
+        </div>
+      </section>
+    </main>
+    
+    {% include 'landing/partials/footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script defer src="{% static 'main/js/preRegister.js' %}"></script>
+    <script defer src="{% static 'main/js/main.js' %}"></script>
+  </body>
+</html>

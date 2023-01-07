@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="{% static 'main/assets/favicon.svg' %}" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="font-medium">
+  <div class="overflow-hidden hidden md:block">
+    <header class="border-b border-border-primary h-[72px]">
+      <div class="flex items-center justify-between w-full h-full p-4 gap-4">
+        <div>
+          <img src="{% static 'main/assets/images/buca_logo.svg' %}" alt="" /></div>
+        <div class="relative w-[490px]">
+          <div class="border flex rounded-full border-border-primary py-2 items-center px-6 gap-3">
+            <div>
+              <svg width="20" height="20" viewBox="0 0 20 20" class="stroke-primary" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.58317 17.4993C13.9554 17.4993 17.4998 13.9549 17.4998 9.58268C17.4998 5.21043 13.9554 1.66602 9.58317 1.66602C5.21092 1.66602 1.6665 5.21043 1.6665 9.58268C1.6665 13.9549 5.21092 17.4993 9.58317 17.4993Z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18.3332 18.3327L16.6665 16.666" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <input class="bg-transparent focus:outline-none w-full font-normal placeholder:opacity-75"
+              placeholder="search profile" type="text" />
+            <a class="font-normal text-primary text-xs whitespace-nowrap" href="#">detailed search</a>
+          </div>
+
+          <div
+            class="absolute top-6 pt-7 shadow-md rounded-b-lg hidden border-x border-b border-border-primary z-10 origin-top w-full font-normal">
+            <div class="px-6 h-20 bg-white rounded-b-lg">
+              <div class="w-full items-center flex gap-3"><svg width="20" height="20" viewBox="0 0 20 20"
+                  class="stroke-primary" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.58317 17.4993C13.9554 17.4993 17.4998 13.9549 17.4998 9.58268C17.4998 5.21043 13.9554 1.66602 9.58317 1.66602C5.21092 1.66602 1.6665 5.21043 1.6665 9.58268C1.6665 13.9549 5.21092 17.4993 9.58317 17.4993Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M18.3332 18.3327L16.6665 16.666" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>das</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="relative inline-block text-left">
+          <div class="p-3">
+            <button type="button"
+              class="inline-flex w-full items-center gap-2 justify-center stroke-black transition-all" id="drop-down">
+              Afsana Hajizada
+              <svg id="drop-down-icon" class="transition-all rotate-0" width="12" height="7" viewBox="0 0 12 7"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.29297 1.1875L5.99964 5.88083L10.7063 1.1875" stroke-width="1.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <!-- <svg class="rotate-180">
+            </svg> -->
+            </button>
+          </div>
+          <div
+            class="absolute  overflow-hidden right-0 z-10 mt-1 w-52 origin-top hidden  rounded-md bg-white shadow-md ring-1 ring-black ring-opacity-5 focus:outline-none"
+            id="drop-down-items">
+            <div class="p-2 space-y-1">
+              <a href="#" class="drop-down-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19 9C19 10.45 18.57 11.78 17.83 12.89C16.75 14.49 15.04 15.62 13.05 15.91C12.71 15.97 12.36 16 12 16C11.64 16 11.29 15.97 10.95 15.91C8.96 15.62 7.25 14.49 6.17 12.89C5.43 11.78 5 10.45 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M21.2501 18.4704L19.6001 18.8604C19.2301 18.9504 18.9401 19.2304 18.8601 19.6004L18.5101 21.0704C18.3201 21.8704 17.3001 22.1104 16.7701 21.4804L12.0001 16.0004L7.23008 21.4904C6.70008 22.1204 5.68008 21.8804 5.49008 21.0804L5.14008 19.6104C5.05008 19.2404 4.76008 18.9504 4.40008 18.8704L2.75008 18.4804C1.99008 18.3004 1.72008 17.3504 2.27008 16.8004L6.17008 12.9004C7.25008 14.5004 8.96008 15.6304 10.9501 15.9204C11.2901 15.9804 11.6401 16.0104 12.0001 16.0104C12.3601 16.0104 12.7101 15.9804 13.0501 15.9204C15.0401 15.6304 16.7501 14.5004 17.8301 12.9004L21.7301 16.8004C22.2801 17.3404 22.0101 18.2904 21.2501 18.4704Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M12.58 5.98L13.17 7.15999C13.25 7.31999 13.46 7.48 13.65 7.51L14.72 7.68999C15.4 7.79999 15.56 8.3 15.07 8.79L14.24 9.61998C14.1 9.75998 14.02 10.03 14.07 10.23L14.31 11.26C14.5 12.07 14.07 12.39 13.35 11.96L12.35 11.37C12.17 11.26 11.87 11.26 11.69 11.37L10.69 11.96C9.96997 12.38 9.53997 12.07 9.72997 11.26L9.96997 10.23C10.01 10.04 9.93997 9.75998 9.79997 9.61998L8.96997 8.79C8.47997 8.3 8.63997 7.80999 9.31997 7.68999L10.39 7.51C10.57 7.48 10.78 7.31999 10.86 7.15999L11.45 5.98C11.74 5.34 12.26 5.34 12.58 5.98Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Go Pro</a>
+              <a href="#" class="drop-down-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.4997 22.0003H4.07973C2.91973 22.0003 1.96973 21.0703 1.96973 19.9303V5.09035C1.96973 2.47035 3.91973 1.28035 6.30973 2.45035L10.7497 4.63035C11.7097 5.10035 12.4997 6.35035 12.4997 7.41035V22.0003Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M21.97 15.0599V18.8399C21.97 20.9999 20.97 21.9999 18.81 21.9999H12.5V10.4199L12.97 10.5199L17.47 11.5299L19.5 11.9799C20.82 12.2699 21.9 12.9499 21.96 14.8699C21.97 14.9299 21.97 14.9899 21.97 15.0599Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.5 9H8.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.5 13H8.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M17.4697 11.5295V14.7495C17.4697 15.9895 16.4597 16.9995 15.2197 16.9995C13.9797 16.9995 12.9697 15.9895 12.9697 14.7495V10.5195L17.4697 11.5295Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M21.9597 14.8693C21.8997 16.0493 20.9197 16.9993 19.7197 16.9993C18.4797 16.9993 17.4697 15.9893 17.4697 14.7493V11.5293L19.4997 11.9793C20.8197 12.2693 21.8997 12.9493 21.9597 14.8693Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Buca Business</a>
+              <form method="POST" action="#" role="none">
+                <button type="submit" class="drop-down-item py-2.5">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.4165 6.29922C7.67484 3.29922 9.2165 2.07422 12.5915 2.07422H12.6998C16.4248 2.07422 17.9165 3.56589 17.9165 7.29089V12.7242C17.9165 16.4492 16.4248 17.9409 12.6998 17.9409H12.5915C9.2415 17.9409 7.69984 16.7326 7.42484 13.7826"
+                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.4999 10H3.0166" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4.87516 7.20898L2.0835 10.0007L4.87516 12.7923" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  Sign out
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex h-[calc(100vh-72px)]">
+
+      <div class="flex">
+        <nav class="border-r border-border-primary h-screen sticky top-0 bg-white overflow-hidden w-[72px] ">
+          <div class="flex flex-col w-full justify-between items-center content-between h-full py-8 px-4">
+            <div class="border-b border-border-primary pb-6 flex flex-col gap-8">
+              <!-- <div class="animate-fadeInTab animate-fadeOutTab"></div> -->
+
+              <div class="bg-avatar avatar profile-tab transition-all">
+                <div class="profile-active transition-all "></div>
+                <img src="{% static 'main/assets/images/dashboard-img.svg' %}" alt="">
+              </div>
+
+
+
+              <div class="bg-primary avatar profile-tab transition-all">
+                <div class="profile-active hidden transition-all animate-fadeInTab"></div>
+                <img src="{% static 'main/assets/images/profile-photo.svg' %}" alt="">
+              </div>
+
+            </div>
+            <div class="py-6 h-full flex flex-col justify-between gap-4">
+              <div class="avatar">
+                <img src="{% static 'main/assets/images/company-pp.svg' %}" alt="">
+
+              </div>
+              <div class="flex flex-col gap-4 ">
+                <div class="avatar bg-avatar stroke-icon"><svg width="21" height="21" viewBox="0 0 25 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.69998 6.32015L16.19 3.49015C20 2.22015 22.07 4.30015 20.81 8.11015L17.98 16.6002C16.08 22.3102 12.96 22.3102 11.06 16.6002L10.22 14.0802L7.69998 13.2402C1.98998 11.3402 1.98998 8.23015 7.69998 6.32015Z"
+                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10.4097 13.6505L13.9897 10.0605" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="avatar bg-avatar stroke-primary border border-primary border-opacity-10">
+                  <svg width="21" height="21" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.1997 9.5L12.9997 13.7L11.3997 11.3L8.19971 14.5" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15.1992 9.5H17.1992V11.5" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M9.7002 22H15.7002C20.7002 22 22.7002 20 22.7002 15V9C22.7002 4 20.7002 2 15.7002 2H9.7002C4.7002 2 2.7002 4 2.7002 9V15C2.7002 20 4.7002 22 9.7002 22Z"
+                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-border-primary pt-6 pb-[136px] flex">
+              <div class="avatar bg-[#FD4B4B] stroke-[#FD4B4B] bg-opacity-10">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.4165 6.29922C7.67484 3.29922 9.2165 2.07422 12.5915 2.07422H12.6998C16.4248 2.07422 17.9165 3.56589 17.9165 7.29089V12.7242C17.9165 16.4492 16.4248 17.9409 12.6998 17.9409H12.5915C9.2415 17.9409 7.69984 16.7326 7.42484 13.7826"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12.4999 10H3.0166" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M4.87516 7.20898L2.0835 10.0007L4.87516 12.7923" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+        </nav>
+        <aside
+          class="bg-profile bg-opacity-50 h-screen sticky top-0 overflow-hidden w-[232px] pb-[165px] justify-center profile_content transition-all hidden animate-fadeIn">
+          <div class="p-1 relative w-full h-full flex flex-col items-center">
+            <div>
+              <img src="{% static 'main/assets/images/profile-background.svg' %}" alt="">
+            </div>
+            <div class="absolute z-10 w-24 h-24 border-4 rounded-full top-11 object-center border-white">
+              <img class="w-full" src="{% static 'main/assets/images/profile-photo.svg' %}" alt="">
+            </div>
+            <h2 class="mt-12 text-xl hover:cursor-default">Afsana Hajizada</h2>
+            <p class="text-primary mt-1 hover:cursor-default"><span class="font-semibold">1965</span> boxes</p>
+            <div
+              class="hover:cursor-default px-3 py-1 border border-primary rounded-full text-primary font-normal text-sm mt-4 bg-white mb-8">
+              Vizual Designer
+            </div>
+            <div class="px-4 w-full">
+              <div class="bg-white px-4 py-6 rounded-xl shadow-box">
+                <div class="flex justify-between mb-2.5 text-sm">
+                  <p class="font-normal">Profile Details</p>
+                  <span class="profile-complete">75%</span>
+                </div>
+                <div class="relative mb-6 h-1.5 bg-orange-primary bg-opacity-10 rounded-full">
+                  <div class="absolute bg-orange-primary w-[75%] z-50 h-full rounded-full"></div>
+                </div>
+                <div
+                  class="stroke-orange-primary flex border border-orange-primary rounded-full px-3 py-0.5 justify-center items-center">
+                  <span class="whitespace-nowrap text-sm text-orange-primary">Upgrade
+                    Profile</span><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.2932 17.9472L15.9999 13.2539L20.7065 17.9472" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg> </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <aside
+          class="border-r border-border-primary h-screen sticky top-0 bg-white overflow-hidden w-[232px] flex flex-col justify-between pb-[165px] font-medium dashboard_tab transition-all animate-fadeIn">
+          <div class="px-6 py-8">
+            <div class="flex flex-col gap-3 transition-all">
+              <!-- <a href="sidebar-active"></a> -->
+              <a href="#" class="sidebar-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke-width="1.5"
+                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z"
+                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M17 22H19C21 22 22 21 22 19V17C22 15 21 14 19 14H17C15 14 14 15 14 17V19C14 21 15 22 17 22Z"
+                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z"
+                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                All Boxes
+              </a>
+              <a href="#" class="sidebar-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.0802 8.58003V15.42C21.0802 16.54 20.4802 17.58 19.5102 18.15L13.5702 21.58C12.6002 22.14 11.4002 22.14 10.4202 21.58L4.48016 18.15C3.51016 17.59 2.91016 16.55 2.91016 15.42V8.58003C2.91016 7.46003 3.51016 6.41999 4.48016 5.84999L10.4202 2.42C11.3902 1.86 12.5902 1.86 13.5702 2.42L19.5102 5.84999C20.4802 6.41999 21.0802 7.45003 21.0802 8.58003Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M11.9999 10.9998C13.2867 10.9998 14.3299 9.95662 14.3299 8.6698C14.3299 7.38298 13.2867 6.33984 11.9999 6.33984C10.7131 6.33984 9.66992 7.38298 9.66992 8.6698C9.66992 9.95662 10.7131 10.9998 11.9999 10.9998Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16 16.6603C16 14.8603 14.21 13.4004 12 13.4004C9.79 13.4004 8 14.8603 8 16.6603"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Standart
+              </a>
+              <a href="#" class="sidebar-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19 9C19 10.45 18.57 11.78 17.83 12.89C16.75 14.49 15.04 15.62 13.05 15.91C12.71 15.97 12.36 16 12 16C11.64 16 11.29 15.97 10.95 15.91C8.96 15.62 7.25 14.49 6.17 12.89C5.43 11.78 5 10.45 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M21.2501 18.4704L19.6001 18.8604C19.2301 18.9504 18.9401 19.2304 18.8601 19.6004L18.5101 21.0704C18.3201 21.8704 17.3001 22.1104 16.7701 21.4804L12.0001 16.0004L7.23008 21.4904C6.70008 22.1204 5.68008 21.8804 5.49008 21.0804L5.14008 19.6104C5.05008 19.2404 4.76008 18.9504 4.40008 18.8704L2.75008 18.4804C1.99008 18.3004 1.72008 17.3504 2.27008 16.8004L6.17008 12.9004C7.25008 14.5004 8.96008 15.6304 10.9501 15.9204C11.2901 15.9804 11.6401 16.0104 12.0001 16.0104C12.3601 16.0104 12.7101 15.9804 13.0501 15.9204C15.0401 15.6304 16.7501 14.5004 17.8301 12.9004L21.7301 16.8004C22.2801 17.3404 22.0101 18.2904 21.2501 18.4704Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M12.58 5.98L13.17 7.15999C13.25 7.31999 13.46 7.48 13.65 7.51L14.72 7.68999C15.4 7.79999 15.56 8.3 15.07 8.79L14.24 9.61998C14.1 9.75998 14.02 10.03 14.07 10.23L14.31 11.26C14.5 12.07 14.07 12.39 13.35 11.96L12.35 11.37C12.17 11.26 11.87 11.26 11.69 11.37L10.69 11.96C9.96997 12.38 9.53997 12.07 9.72997 11.26L9.96997 10.23C10.01 10.04 9.93997 9.75998 9.79997 9.61998L8.96997 8.79C8.47997 8.3 8.63997 7.80999 9.31997 7.68999L10.39 7.51C10.57 7.48 10.78 7.31999 10.86 7.15999L11.45 5.98C11.74 5.34 12.26 5.34 12.58 5.98Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Pro
+              </a>
+              <a href="#" class="sidebar-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.4997 22.0003H4.07973C2.91973 22.0003 1.96973 21.0703 1.96973 19.9303V5.09035C1.96973 2.47035 3.91973 1.28035 6.30973 2.45035L10.7497 4.63035C11.7097 5.10035 12.4997 6.35035 12.4997 7.41035V22.0003Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M21.97 15.0599V18.8399C21.97 20.9999 20.97 21.9999 18.81 21.9999H12.5V10.4199L12.97 10.5199L17.47 11.5299L19.5 11.9799C20.82 12.2699 21.9 12.9499 21.96 14.8699C21.97 14.9299 21.97 14.9899 21.97 15.0599Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.5 9H8.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.5 13H8.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M17.4697 11.5295V14.7495C17.4697 15.9895 16.4597 16.9995 15.2197 16.9995C13.9797 16.9995 12.9697 15.9895 12.9697 14.7495V10.5195L17.4697 11.5295Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M21.9597 14.8693C21.8997 16.0493 20.9197 16.9993 19.7197 16.9993C18.4797 16.9993 17.4697 15.9893 17.4697 14.7493V11.5293L19.4997 11.9793C20.8197 12.2693 21.8997 12.9493 21.9597 14.8693Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Business
+
+              </a>
+              <a href="#" class="sidebar-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.99983 22H15.9998C20.0198 22 20.7398 20.39 20.9498 18.43L21.6998 10.43C21.9698 7.99 21.2698 6 16.9998 6H6.99983C2.72983 6 2.02983 7.99 2.29983 10.43L3.04983 18.43C3.25983 20.39 3.97983 22 7.99983 22Z"
+                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M8 6V5.2C8 3.43 8 2 11.2 2H12.8C16 2 16 3.43 16 5.2V6" stroke-width="1.5"
+                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M14 13V14C14 14.01 14 14.01 14 14.02C14 15.11 13.99 16 12 16C10.02 16 10 15.12 10 14.03V13C10 12 10 12 11 12H13C14 12 14 12 14 13Z"
+                    stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M21.65 11C19.34 12.68 16.7 13.68 14 14.02" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2.62012 11.2695C4.87012 12.8095 7.41012 13.7395 10.0001 14.0295" stroke-width="1.5"
+                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Company
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center relative">
+            <img src="{% static 'main/assets/images/update_profile.svg' %}" alt="">
+            <div class="absolute z-10 bottom-0 pb-[18px]">
+              <div class="flex gap-3 mb-[22.5px] items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1860_5964" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                    height="24">
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1860_5964)">
+                    <path
+                      d="M8.6 22.5L6.7 19.3L3.1 18.5L3.45 14.8L1 12L3.45 9.2L3.1 5.5L6.7 4.7L8.6 1.5L12 2.95L15.4 1.5L17.3 4.7L20.9 5.5L20.55 9.2L23 12L20.55 14.8L20.9 18.5L17.3 19.3L15.4 22.5L12 21.05L8.6 22.5ZM9.45 19.95L12 18.85L14.6 19.95L16 17.55L18.75 16.9L18.5 14.1L20.35 12L18.5 9.85L18.75 7.05L16 6.45L14.55 4.05L12 5.15L9.4 4.05L8 6.45L5.25 7.05L5.5 9.85L3.65 12L5.5 14.1L5.25 16.95L8 17.55L9.45 19.95ZM10.95 15.55L16.6 9.9L15.2 8.45L10.95 12.7L8.8 10.6L7.4 12L10.95 15.55Z"
+                      fill="white" />
+                  </g>
+                </svg>
+                <span class="text-white text-sm">Upgrade to Pro</span>
+              </div>
+              <a href="" class=" relative rounded-lg text-sm text-primary bg-white px-7 py-2.5">Upgrade Now</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="overflow-y-auto dashboard_tab transition-all animate-fadeIn flex-grow">
+        <div class="sidebar-container">
+          <div class="p-8 flex flex-col gap-6 w-full">
+            <h2 class="text-[28px] sidebar-title"></h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 all-boxes">
+              <!-- <div class="profile-box">
+            <div class="rounded-full bg-avatar w-14 h-14 flex justify-center items-center">
+              <img src="${img}" alt="" />
+            </div>
+            <div class="flex justify-end">
+              <a>
+                <img src="../assets/icons/more-horizontal.svg" alt="" />
+              </a>
+            </div>
+            <div class=" flex items-end">
+              <span>${title}</span>
+            </div>
+            <div class="flex justify-end gap-2 items-end">
+              <div>
+                <img src="../assets/icons/group.svg" alt="" />
+              </div>
+              <span>${added}</span>
+            </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-container">
+          <div class="p-8 flex flex-col gap-6 w-full">
+            <h2 class="text-[28px] sidebar-title"></h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 all-boxes">
+              <!-- <div class="profile-box">
+            <div class="rounded-full bg-avatar w-14 h-14 flex justify-center items-center">
+              <img src="${img}" alt="" />
+            </div>
+            <div class="flex justify-end">
+              <a>
+                <img src="../assets/icons/more-horizontal.svg" alt="" />
+              </a>
+            </div>
+            <div class=" flex items-end">
+              <span>${title}</span>
+            </div>
+            <div class="flex justify-end gap-2 items-end">
+              <div>
+                <img src="../assets/icons/group.svg" alt="" />
+              </div>
+              <span>${added}</span>
+            </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-container">
+          <div class="p-8 flex flex-col gap-6 w-full">
+            <h2 class="text-[28px] sidebar-title"></h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 all-boxes">
+              <!-- <div class="profile-box">
+            <div class="rounded-full bg-avatar w-14 h-14 flex justify-center items-center">
+              <img src="${img}" alt="" />
+            </div>
+            <div class="flex justify-end">
+              <a>
+                <img src="../assets/icons/more-horizontal.svg" alt="" />
+              </a>
+            </div>
+            <div class=" flex items-end">
+              <span>${title}</span>
+            </div>
+            <div class="flex justify-end gap-2 items-end">
+              <div>
+                <img src="../assets/icons/group.svg" alt="" />
+              </div>
+              <span>${added}</span>
+            </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-container">
+          <div class="p-8 flex flex-col gap-6 w-full">
+            <h2 class="text-[28px] sidebar-title"></h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 all-boxes">
+              <!-- <div class="profile-box">
+            <div class="rounded-full bg-avatar w-14 h-14 flex justify-center items-center">
+              <img src="${img}" alt="" />
+            </div>
+            <div class="flex justify-end">
+              <a>
+                <img src="../assets/icons/more-horizontal.svg" alt="" />
+              </a>
+            </div>
+            <div class=" flex items-end">
+              <span>${title}</span>
+            </div>
+            <div class="flex justify-end gap-2 items-end">
+              <div>
+                <img src="../assets/icons/group.svg" alt="" />
+              </div>
+              <span>${added}</span>
+            </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-container">
+          <div class="p-8 flex flex-col gap-6 w-full">
+            <h2 class="text-[28px] sidebar-title"></h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 all-boxes">
+              <!-- <div class="profile-box">
+            <div class="rounded-full bg-avatar w-14 h-14 flex justify-center items-center">
+              <img src="${img}" alt="" />
+            </div>
+            <div class="flex justify-end">
+              <a>
+                <img src="../assets/icons/more-horizontal.svg" alt="" />
+              </a>
+            </div>
+            <div class=" flex items-end">
+              <span>${title}</span>
+            </div>
+            <div class="flex justify-end gap-2 items-end">
+              <div>
+                <img src="../assets/icons/group.svg" alt="" />
+              </div>
+              <span>${added}</span>
+            </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-container">
+          <div class="p-8 flex flex-col gap-6 w-full">
+            <h2 class="text-[28px] sidebar-title"></h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 all-boxes">
+              <!-- <div class="profile-box">
+            <div class="rounded-full bg-avatar w-14 h-14 flex justify-center items-center">
+              <img src="${img}" alt="" />
+            </div>
+            <div class="flex justify-end">
+              <a>
+                <img src="../assets/icons/more-horizontal.svg" alt="" />
+              </a>
+            </div>
+            <div class=" flex items-end">
+              <span>${title}</span>
+            </div>
+            <div class="flex justify-end gap-2 items-end">
+              <div>
+                <img src="../assets/icons/group.svg" alt="" />
+              </div>
+              <span>${added}</span>
+            </div>
+          </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overflow-y-auto overflow-x-hidden profile_content transition-all hidden animate-fadeIn flex-grow">
+        <div class="w-full md:px-4 lg:px-8 mt-6">
+          <div class="bg-profile rounded-md bg-opacity-25 p-1.5 flex justify-between items-center">
+            <div class="ml-2.5">
+              <ul class="flex gap-1.5 items-center">
+                <li class="pro-tab pro-active">Portfolio</li>
+                <li class="pro-tab">Keywords</li>
+                <li class="pro-tab">Contact</li>
+              </ul>
+            </div>
+            <div>
+              <button
+                class="flex gap-3 whitespace-nowrap px-4 py-2 lg:px-7 lg:py-2.5 justify-center items-center bg-primary text-white text-sm font-normal rounded-md"><svg
+                  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.33325 1.33398H5.99992C2.66659 1.33398 1.33325 2.66732 1.33325 6.00065V10.0007C1.33325 13.334 2.66659 14.6673 5.99992 14.6673H9.99992C13.3333 14.6673 14.6666 13.334 14.6666 10.0007V8.66732"
+                    stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10.6933 2.0135L5.43992 7.26684C5.23992 7.46684 5.03992 7.86017 4.99992 8.14684L4.71325 10.1535C4.60659 10.8802 5.11992 11.3868 5.84659 11.2868L7.85325 11.0002C8.13325 10.9602 8.52659 10.7602 8.73325 10.5602L13.9866 5.30684C14.8933 4.40017 15.3199 3.34684 13.9866 2.0135C12.6533 0.680168 11.5999 1.10684 10.6933 2.0135Z"
+                    stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M9.93994 2.76758C10.3866 4.36091 11.6333 5.60758 13.2333 6.06091" stroke="white"
+                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="hidden lg:inline">Edit profile</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="profile-container">
+          <div class="px-8 py-4">
+            <div class="projects">
+              <div class="upload ">
+                <div class="flex flex-col items-center justify-center gap-4 min-h-max h-full">
+                  <div>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.9999 36.6654H24.9999C33.3333 36.6654 36.6666 33.332 36.6666 24.9987V14.9987C36.6666 6.66536 33.3333 3.33203 24.9999 3.33203H14.9999C6.66659 3.33203 3.33325 6.66536 3.33325 14.9987V24.9987C3.33325 33.332 6.66659 36.6654 14.9999 36.6654Z"
+                        stroke="#FFA700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M15 15.8516L20 10.8516L25 15.8516" stroke="#FFA700" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M20 10.8516V24.1849" stroke="#FFA700" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M10 27.5156C16.4833 29.6823 23.5167 29.6823 30 27.5156" stroke="#FFA700" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="flex flex-col items-center justify-center gap-3">
+                    <p class="text-xl whitespace-nowrap">Add new project</p>
+                    <span class="font-normal text-sm text-center">
+                      <p>Projects highlight your best skills</p> and experience.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="project">
+                <div class="flex flex-col items-center h-full justify-center gap-4">
+                  <div class="w-full">
+                    <img class="rounded-sm w-full bg-cover" src="" alt="">
+                  </div>
+                  <div class="flex w-full justify-between">
+                    <div class="flex gap-3">
+                      <div>
+                        <div class="bg-primary bg-opacity-[12%] p-1 rounded-sm">
+                        </div>
+                      </div>
+                      <div>
+                        <p class="text-secondary"></p>
+                        <span class="text-secondary font-normal text-sm text-opacity-50"></span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex gap-1.5 items-center pb-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-container hidden">
+          <div class="savedKeywords">
+            <!-- <div class="savedKeyword ">
+              <p class="font-normal text-secondary"></p>
+            </div> -->
+            <!-- <div class="addKeyword">
+              <div class="max-w-fit cursor-pointer text-primary flex gap-2 items-center"></div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="profile-container hidden">
+          <div class="pl-12 pr-10 py-6">
+            <div class="flex">
+              <div class="w-2/3 flex flex-col gap-12">
+                <div class="flex flex-col gap-5">
+                  <h3 class="text-xl">Summary</h3>
+                  <p class="font-normal text-sm pr-3">I'm a UX/UI Designer with 5+ years of experience designing
+                    engaging and
+                    user-friendly interfaces
+                    for
+                    both mobile and web applications. I can guide your project through the entire design process: from
+                    analysis to wireframes, to interactive prototypes and finally to user-friendly interfaces that are
+                    both beautiful and efficient.
+                  </p>
+                  <span class="font-light">www.letifkerim.com</span>
+                  <div class="flex flex-col lg:flex-row gap-2 lg:gap-14 mt-2">
+                    <p class="font-light whitespace-nowrap"><span class="font-normal">2 years</span> experience in
+                      <span class="font-normal">UX Design</span>
+                    </p>
+                    <p class="font-normal whitespace-nowrap">Fluent in Azerbaijani, English, Russian</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                  <h3 class="text-xl">Contact</h3>
+                  <div class="grid lg:grid-cols-2 lg:grid-rows-2 lg:grid-flow-col-dense gap-4 max-w-xl">
+                    <span class="font-light">letifkerim@gmail.com</span>
+                    <span class="font-light">mr.letif.kerim@gmail.com</span>
+                    <span class="font-light">+994 50 670 7504</span>
+                    <span class="font-light">+994 55 908 2408</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                  <h3 class="text-xl">Social</h3>
+                  <div class="flex gap-10 text-primary">
+                    <a href="#" class="font-light">LINKEDINN</a>
+                    <a href="#" class="font-light">FACEBOOK</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="md:hidden">
+    <div class="flex px-5 py-3.5 items-center top-0 bg-white shadow-md">
+      <h2 class="flex justify-center flex-grow font-semibold text-xl">Profile</h2>
+    </div>
+    <div class="profile-content w-full">
+      <div class="p-1 relative w-full h-full flex flex-col items-center">
+        <div class="relative flex justify-center w-full">
+          <div class="w-full">
+            <img class="w-full" src="{% static 'main/assets/images/profile-background-long.svg' %}" alt="">
+          </div>
+          <div
+            class="absolute z-10 w-3/12 w-min-24 h-min-24 border-4 rounded-full top-[64%] object-center border-white">
+            <img class="w-full" src="{% static 'main/assets/images/profile-photo.svg' %}" alt="">
+          </div>
+        </div>
+        <div class="flex flex-col mt-[20%] items-center">
+          <h2 class="text-xl sm:text-2xl hover:cursor-default">Afsana Hajizada</h2>
+          <p class="text-primary mt-1 sm:text-lg hover:cursor-default"><span class="font-semibold">1965</span> boxes</p>
+        </div>
+        <div
+          class="hover:cursor-default px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-primary font-normal text-sm sm:text-base mt-4 bg-primary bg-opacity-10 mb-4">
+          Vizual Designer
+        </div>
+        <div class="flex gap-3 w-full font-normal justify-center mb-40">
+          <button
+            class="bg-primary stroke-white sm:w-full justify-center max-w-[200px] items-center flex text-white rounded-md gap-3 py-3 px-6"><svg
+              width="22" height="22" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.69998 6.32015L16.19 3.49015C20 2.22015 22.07 4.30015 20.81 8.11015L17.98 16.6002C16.08 22.3102 12.96 22.3102 11.06 16.6002L10.22 14.0802L7.69998 13.2402C1.98998 11.3402 1.98998 8.23015 7.69998 6.32015Z"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10.4097 13.6505L13.9897 10.0605" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Share
+          </button>
+          <button
+            class="bg-[#E7EFFD] justify-center items-center stroke-primary sm:w-full max-w-[200px] flex text-primary rounded-md py-3 px-9 gap-3">
+            <svg width="20" height="20" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.445 2.70041L4.28751 9.21791C4.05501 9.46541 3.83001 9.95291 3.78501 10.2904L3.50751 12.7204C3.41001 13.5979 4.04001 14.1979 4.91001 14.0479L7.32501 13.6354C7.66251 13.5754 8.13501 13.3279 8.36751 13.0729L14.525 6.55541C15.59 5.43041 16.07 4.14791 14.4125 2.58041C12.7625 1.02791 11.51 1.57541 10.445 2.70041Z"
+                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9.41748 3.78711C9.73998 5.85711 11.42 7.43961 13.505 7.64961" stroke-width="1.5"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2.75 16.5H16.25" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full">
+      <div class="flex items-center">
+        <ul class="flex w-full text-sm sm:text-base justify-around gap-1.5 items-center text-[#919191] font-semibold">
+          <li class="pro-tab-mob">Portfolio
+            <!-- <div class="absolute top-9 sm:top-10 left-0 bg-primary w-full scale-125 sm:scale-x-150 h-0.5 transition-all animate-opening"></div> -->
+
+            <div class="pro-tab-mob-active ">
+            </div>
+          </li>
+          <li class="pro-tab-mob">Keywords
+            <div class="pro-tab-mob-active hidden"></div>
+
+          </li>
+          <li class="pro-tab-mob">Contact
+            <div class="pro-tab-mob-active hidden"></div>
+
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="h-0.5 w-full bg-[#F2F2F2]"></div>
+    </div>
+
+    <div class="profile-container">
+      <div class="px-5 py-8">
+        <div class="projects">
+          <div class="upload ">
+            <div class="flex flex-col items-center justify-center gap-4 min-h-max h-full">
+              <div>
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.9999 36.6654H24.9999C33.3333 36.6654 36.6666 33.332 36.6666 24.9987V14.9987C36.6666 6.66536 33.3333 3.33203 24.9999 3.33203H14.9999C6.66659 3.33203 3.33325 6.66536 3.33325 14.9987V24.9987C3.33325 33.332 6.66659 36.6654 14.9999 36.6654Z"
+                    stroke="#FFA700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M15 15.8516L20 10.8516L25 15.8516" stroke="#FFA700" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M20 10.8516V24.1849" stroke="#FFA700" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M10 27.5156C16.4833 29.6823 23.5167 29.6823 30 27.5156" stroke="#FFA700" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="flex flex-col items-center justify-center gap-3">
+                <p class="text-xl whitespace-nowrap">Add new project</p>
+                <span class="font-normal text-sm text-center">
+                  <p>Projects highlight your best skills</p> and experience.
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="project">
+                <div class="flex flex-col items-center h-full justify-center gap-4">
+                  <div class="w-full">
+                    <img class="rounded-sm w-full bg-cover" src="" alt="">
+                  </div>
+                  <div class="flex w-full justify-between">
+                    <div class="flex gap-3">
+                      <div>
+                        <div class="bg-primary bg-opacity-[12%] p-1 rounded-sm">
+                        </div>
+                      </div>
+                      <div>
+                        <p class="text-secondary"></p>
+                        <span class="text-secondary font-normal text-sm text-opacity-50"></span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex gap-1.5 items-center pb-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-container hidden">
+      <div class="savedKeywords">
+        <!-- <div class="savedKeyword ">
+              <p class="font-normal text-secondary"></p>
+            </div> -->
+        <!-- <div class="addKeyword">
+              <div class="max-w-fit cursor-pointer text-primary flex gap-2 items-center"></div>
+            </div> -->
+      </div>
+    </div>
+
+    <div class="profile-container hidden">
+      <div class="flex flex-col gap-12 p-5 w-full">
+        <div class="flex flex-col gap-5 p-6 bg-bg-mob rounded-xl">
+          <h3 class="text-xl sm:text-2xl">Summary</h3>
+          <p class="font-normal text-sm sm:text-base pr-3">I'm a UX/UI Designer with 5+ years of experience
+            designing
+            engaging and
+            user-friendly interfaces
+            for
+            both mobile and web applications. I can guide your project through the entire design process: from
+            analysis to wireframes, to interactive prototypes and finally to user-friendly interfaces that are
+            both beautiful and efficient.
+          </p>
+          <a href="#" class="w-max font-light sm:text-lg">www.letifkerim.com</a>
+          <div class="gap-14 mt-2 sm:text-lg">
+            <p class="font-light"><span class="font-normal">2 years</span> experience in
+              <span class="font-normal">UX Design</span>
+            </p>
+            <p class="font-normal">Fluent in Azerbaijani, English, Russian</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 p-6 bg-bg-mob rounded-xl">
+          <h3 class="text-xl sm:text-2xl">Contact</h3>
+          <div class="grid grid-cols-1 gap-4 sm:text-lg">
+            <span class="font-light cursor-pointer w-max">letifkerim@gmail.com</span>
+            <span class="font-light cursor-pointer w-max">mr.letif.kerim@gmail.com</span>
+            <span class="font-light cursor-pointer w-max">+994 50 670 7504</span>
+            <span class="font-light cursor-pointer w-max">+994 55 908 2408</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 p-6 bg-bg-mob rounded-xl">
+          <h3 class="text-xl">Social</h3>
+          <div class="flex gap-10 text-primary">
+            <a href="#" class="font-light">LINKEDINN</a>
+            <a href="#" class="font-light">FACEBOOK</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flex sticky w-full bottom-0 bg-[#FBFCFC] px-8 py-6 stroke-icon z-50">
+      <div class="flex justify-between w-full items-center">
+        <div class="mob-nav">
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.0595 10.87C9.95947 10.86 9.83947 10.86 9.72947 10.87C7.34947 10.79 5.45947 8.84 5.45947 6.44C5.45947 3.99 7.43947 2 9.89947 2C12.3495 2 14.3395 3.99 14.3395 6.44C14.3295 8.84 12.4395 10.79 10.0595 10.87Z"
+              stroke="#656070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M17.3097 4C19.2497 4 20.8097 5.57 20.8097 7.5C20.8097 9.39 19.3097 10.93 17.4397 11C17.3597 10.99 17.2697 10.99 17.1797 11"
+              stroke="#656070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M5.05963 14.56C2.63963 16.18 2.63963 18.82 5.05963 20.43C7.80963 22.27 12.3196 22.27 15.0696 20.43C17.4896 18.81 17.4896 16.17 15.0696 14.56C12.3296 12.73 7.81963 12.73 5.05963 14.56Z"
+              stroke="#656070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M19.2397 20C19.9597 19.85 20.6397 19.56 21.1997 19.13C22.7597 17.96 22.7597 16.03 21.1997 14.86C20.6497 14.44 19.9797 14.16 19.2697 14"
+              stroke="#656070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="mob-nav">
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.1997 9.5L12.9997 13.7L11.3997 11.3L8.19971 14.5" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M15.1992 9.5H17.1992V11.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M9.7002 22H15.7002C20.7002 22 22.7002 20 22.7002 15V9C22.7002 4 20.7002 2 15.7002 2H9.7002C4.7002 2 2.7002 4 2.7002 9V15C2.7002 20 4.7002 22 9.7002 22Z"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="mob-nav">
+          <div class="stroke-primary w-[54px] h-[54px] rounded-full flex bg-avatar justify-center items-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.58317 17.4993C13.9554 17.4993 17.4998 13.9549 17.4998 9.58268C17.4998 5.21043 13.9554 1.66602 9.58317 1.66602C5.21092 1.66602 1.6665 5.21043 1.6665 9.58268C1.6665 13.9549 5.21092 17.4993 9.58317 17.4993Z"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M18.3332 18.3327L16.6665 16.666" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+        </div>
+        <div class="mob-nav">
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7.69998 6.32015L16.19 3.49015C20 2.22015 22.07 4.30015 20.81 8.11015L17.98 16.6002C16.08 22.3102 12.96 22.3102 11.06 16.6002L10.22 14.0802L7.69998 13.2402C1.98998 11.3402 1.98998 8.23015 7.69998 6.32015Z"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10.4097 13.6505L13.9897 10.0605" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="mob-nav">
+          <div class="w-[26px] h-[26px] flex bg-avatar justify-center items-center rounded-full">
+            <img class="w-[16px] h-[16px]" src="{% static 'main/assets/images/dashboard-img.svg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bottom-0 h-screen absolute hidden filter-container ">
+      <div class="fixed bottom-0 inset-0 h-screen bg-black bg-opacity-70">
+        <!-- <div class="animate-fadeIn animate-fadeOut"></div> -->
+        <div class="bg-white z-50 w-full fixed bottom-0 rounded-t-[20px] filter-animate ">
+          <div class="px-5 pt-4 pb-6">
+            <div class="flex justify-center mb-4 h-5 cursor-pointer  filter-close">
+              <div class="w-14 h-1 bg-[#C3C5D4] rounded-full"></div>
+            </div>
+            <div>
+              <p class="text-2xl mb-6">Filters</p>
+              <div class="mb-8">
+                <div class="flex flex-col gap-2 transition-all">
+                  <!-- <a href="sidebar-active"></a> -->
+                  <a href="#" class="sidebar-item-mob">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M17 22H19C21 22 22 21 22 19V17C22 15 21 14 19 14H17C15 14 14 15 14 17V19C14 21 15 22 17 22Z"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    All Boxes
+                  </a>
+                  <a href="#" class="sidebar-item-mob">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.0802 8.58003V15.42C21.0802 16.54 20.4802 17.58 19.5102 18.15L13.5702 21.58C12.6002 22.14 11.4002 22.14 10.4202 21.58L4.48016 18.15C3.51016 17.59 2.91016 16.55 2.91016 15.42V8.58003C2.91016 7.46003 3.51016 6.41999 4.48016 5.84999L10.4202 2.42C11.3902 1.86 12.5902 1.86 13.5702 2.42L19.5102 5.84999C20.4802 6.41999 21.0802 7.45003 21.0802 8.58003Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M11.9999 10.9998C13.2867 10.9998 14.3299 9.95662 14.3299 8.6698C14.3299 7.38298 13.2867 6.33984 11.9999 6.33984C10.7131 6.33984 9.66992 7.38298 9.66992 8.6698C9.66992 9.95662 10.7131 10.9998 11.9999 10.9998Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M16 16.6603C16 14.8603 14.21 13.4004 12 13.4004C9.79 13.4004 8 14.8603 8 16.6603"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Standart</a>
+                  <a href="#" class="sidebar-item-mob">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19 9C19 10.45 18.57 11.78 17.83 12.89C16.75 14.49 15.04 15.62 13.05 15.91C12.71 15.97 12.36 16 12 16C11.64 16 11.29 15.97 10.95 15.91C8.96 15.62 7.25 14.49 6.17 12.89C5.43 11.78 5 10.45 5 9C5 5.13 8.13 2 12 2C15.87 2 19 5.13 19 9Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M21.2501 18.4704L19.6001 18.8604C19.2301 18.9504 18.9401 19.2304 18.8601 19.6004L18.5101 21.0704C18.3201 21.8704 17.3001 22.1104 16.7701 21.4804L12.0001 16.0004L7.23008 21.4904C6.70008 22.1204 5.68008 21.8804 5.49008 21.0804L5.14008 19.6104C5.05008 19.2404 4.76008 18.9504 4.40008 18.8704L2.75008 18.4804C1.99008 18.3004 1.72008 17.3504 2.27008 16.8004L6.17008 12.9004C7.25008 14.5004 8.96008 15.6304 10.9501 15.9204C11.2901 15.9804 11.6401 16.0104 12.0001 16.0104C12.3601 16.0104 12.7101 15.9804 13.0501 15.9204C15.0401 15.6304 16.7501 14.5004 17.8301 12.9004L21.7301 16.8004C22.2801 17.3404 22.0101 18.2904 21.2501 18.4704Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.58 5.98L13.17 7.15999C13.25 7.31999 13.46 7.48 13.65 7.51L14.72 7.68999C15.4 7.79999 15.56 8.3 15.07 8.79L14.24 9.61998C14.1 9.75998 14.02 10.03 14.07 10.23L14.31 11.26C14.5 12.07 14.07 12.39 13.35 11.96L12.35 11.37C12.17 11.26 11.87 11.26 11.69 11.37L10.69 11.96C9.96997 12.38 9.53997 12.07 9.72997 11.26L9.96997 10.23C10.01 10.04 9.93997 9.75998 9.79997 9.61998L8.96997 8.79C8.47997 8.3 8.63997 7.80999 9.31997 7.68999L10.39 7.51C10.57 7.48 10.78 7.31999 10.86 7.15999L11.45 5.98C11.74 5.34 12.26 5.34 12.58 5.98Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Pro
+                  </a>
+                  <a href="#" class="sidebar-item-mob">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.4997 22.0003H4.07973C2.91973 22.0003 1.96973 21.0703 1.96973 19.9303V5.09035C1.96973 2.47035 3.91973 1.28035 6.30973 2.45035L10.7497 4.63035C11.7097 5.10035 12.4997 6.35035 12.4997 7.41035V22.0003Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M21.97 15.0599V18.8399C21.97 20.9999 20.97 21.9999 18.81 21.9999H12.5V10.4199L12.97 10.5199L17.47 11.5299L19.5 11.9799C20.82 12.2699 21.9 12.9499 21.96 14.8699C21.97 14.9299 21.97 14.9899 21.97 15.0599Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M5.5 9H8.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M5.5 13H8.97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M17.4697 11.5295V14.7495C17.4697 15.9895 16.4597 16.9995 15.2197 16.9995C13.9797 16.9995 12.9697 15.9895 12.9697 14.7495V10.5195L17.4697 11.5295Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M21.9597 14.8693C21.8997 16.0493 20.9197 16.9993 19.7197 16.9993C18.4797 16.9993 17.4697 15.9893 17.4697 14.7493V11.5293L19.4997 11.9793C20.8197 12.2693 21.8997 12.9493 21.9597 14.8693Z"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Business
+
+                  </a>
+                  <a href="#" class="sidebar-item-mob">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99983 22H15.9998C20.0198 22 20.7398 20.39 20.9498 18.43L21.6998 10.43C21.9698 7.99 21.2698 6 16.9998 6H6.99983C2.72983 6 2.02983 7.99 2.29983 10.43L3.04983 18.43C3.25983 20.39 3.97983 22 7.99983 22Z"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M8 6V5.2C8 3.43 8 2 11.2 2H12.8C16 2 16 3.43 16 5.2V6" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M14 13V14C14 14.01 14 14.01 14 14.02C14 15.11 13.99 16 12 16C10.02 16 10 15.12 10 14.03V13C10 12 10 12 11 12H13C14 12 14 12 14 13Z"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M21.65 11C19.34 12.68 16.7 13.68 14 14.02" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M2.62012 11.2695C4.87012 12.8095 7.41012 13.7395 10.0001 14.0295" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Company
+                  </a>
+                </div>
+              </div>
+              <button
+                class="w-full flex justify-center items-center px-6 py-3 bg-[#3E3EF4] text-white rounded-3xl filter-btn">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js">
+  </script>
+  <script defer src="{% static 'main/js/script.js' %}"></script>
+</body>
+
+
+
+</html>

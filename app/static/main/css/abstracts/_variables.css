@@ -1,0 +1,12 @@
+/* VARIABLES */
+
+:root {
+  --colorPrimary: hsla(219, 87%, 50%, 1);
+  --colorSecondary: hsl(144, 85%, 46%, 1);
+  --colorErr: hsla(18, 87%, 50%, 1);
+  --colorTextPrim: hsla(219, 15%, 16%, 1);
+  --colorTextSecond: hsla(219, 8%, 35%, 1);
+  --blueBtnHover: hsla(219, 90%, 45%, 1);
+  --greenBtnHover: hsla(144, 85%, 44%, 1);
+  --whiteBtnHover: hsl(0, 0%, 98%, 1);
+}

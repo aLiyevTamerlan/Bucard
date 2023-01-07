@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins";
+  }
+}
+
+@layer components {
+  html {
+    @apply scroll-smooth scroll-p-12;
+  }
+  .drop-down-item {
+    @apply flex py-2 px-3 items-center text-sm gap-2.5 w-full border border-border-primary rounded-lg whitespace-nowrap hover:bg-primary hover:text-white hover:stroke-white stroke-icon;
+  }
+  .avatar {
+    @apply flex items-center justify-center w-10 h-10 rounded-full hover:cursor-pointer;
+  }
+
+  .profile-active {
+    @apply absolute left-0 w-1 rounded-r-lg h-14 bg-primary;
+  }
+
+  .sidebar-item {
+    @apply flex gap-[18px] px-[18px] items-center text-sm py-2.5 w-full rounded-lg  whitespace-nowrap hover:bg-primary hover:text-white hover:stroke-white stroke-icon transition-all;
+  }
+
+  .sidebar-item-mob {
+    @apply flex gap-4 px-6 items-center text-base py-3 w-full rounded-xl  whitespace-nowrap hover:bg-primary hover:text-white hover:stroke-white stroke-[#6C7C8F] border border-border-primary text-[#6C7C8F] font-normal transition-all;
+  }
+
+  .profile-box {
+    @apply grid justify-between h-40 grid-cols-2 grid-rows-2 p-6 border rounded-lg text-secondary border-border-primary;
+  }
+
+  .sidebar-active {
+    @apply text-white bg-primary stroke-white;
+  }
+
+  .mob-nav {
+    @apply cursor-pointer;
+  }
+
+  .pro-active {
+    @apply transition-all duration-300 scale-105 bg-white rounded-md shadow-box;
+  }
+
+  .pro-tab {
+    @apply px-7 py-2.5 font-normal lg:text-base text-sm cursor-pointer;
+  }
+
+  .profile-container {
+    @apply transition-all animate-fadeIn;
+  }
+
+  .upload {
+    @apply border border-orange-primary rounded-[4px] p-14 min-w-min;
+  }
+
+  .projects {
+    @apply grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .project {
+    @apply p-3 border rounded-lg min-w-min border-border-secondary;
+  }
+
+  .savedKeywords {
+    @apply grid max-w-5xl gap-4 p-8 lg:grid-cols-2;
+  }
+
+  .savedKeyword {
+    @apply text-secondary whitespace-nowrap border-b border-[#E5E5E5] px-6 pb-4;
+  }
+
+  .addKeyword {
+    @apply flex items-center pb-2 pl-6 font-normal whitespace-nowrap;
+  }
+
+  .btn-register {
+    @apply flex items-center justify-center w-full gap-1 py-3 text-sm font-normal text-white transition-all rounded px-7 md:px-12 lg:w-fit md:py-3 md:text-base bg-primary;
+  }
+
+  .btn-register-white {
+    @apply flex items-center justify-center w-full gap-1 py-3 text-sm font-normal bg-white rounded px-7 md:px-12 lg:w-fit md:py-3 md:text-base text-primary;
+  }
+
+  .btn-personal {
+    @apply flex items-center justify-center border border-r-0 rounded-l border-primary border-opacity-10;
+  }
+
+  .btn-business {
+    @apply flex items-center justify-center gap-3 border border-l-0 rounded-r border-primary border-opacity-10;
+  }
+
+  .check-box {
+    @apply h-fit px-1.5 py-2 rounded-md bg-[#1BC5BD] bg-opacity-[0.16];
+  }
+
+  .pro-tab-mob {
+    @apply relative p-1 pb-3 cursor-pointer sm:p-4;
+  }
+
+  .pro-tab-mob-active {
+    @apply absolute -bottom-0.5 left-0 bg-primary transition-all w-full  h-0.5 animate-opening;
+  }
+
+  .bill-tab {
+    @apply relative py-[18px] px-6 cursor-pointer rounded-lg bg-profile;
+  }
+
+  .bill-tab-active {
+    @apply relative py-[18px] px-6 cursor-pointer rounded-lg border border-primary;
+  }
+
+  .discount-text {
+    @apply text-sm font-normal text-text-black;
+  }
+
+  .discount-badge {
+    @apply px-2 py-0.5 text-xs font-semibold text-white uppercase rounded-full bg-optianal;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #edf2f7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}

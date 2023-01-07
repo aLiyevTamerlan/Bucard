@@ -1,0 +1,44 @@
+{% load static %}
+{% load i18n %}
+
+<footer id="contact" class="mt-12 bg-profile sm:mt-20">
+    <div
+      class="flex flex-col items-center justify-between w-11/12 gap-6 py-8 mx-auto lg:gap-0 lg:flex-row lg:px-14"
+    >
+      <div class="flex flex-col gap-5">
+        <span
+          ><img src="{% static 'main/assets/images/buca_logo.svg' %}" class="hidden lg:flex" alt=""
+        /></span>
+        <span class="text-sm font-normal"
+          >© {% blocktranslate %}All rights recerved{% endblocktranslate %} • {% now "Y" %} Bucard.co</span
+        >
+      </div>
+      <div class="flex flex-col gap-3 text-base font-normal sm:text-lg sm:flex-row lg:flex-col sm:gap-12 lg:gap-3">
+        <span>{{ site_settings.contact_number|default:"+994 50 670 75 04" }}</span>
+        <span>{{ site_settings.contact_email|default:"contact@bucard.co" }}</span>
+      </div>
+      <div class="flex gap-6">
+        <p class="bg-[#DCE1EA] rounded p-2">
+            <a href='{{ site_settings.fb_link|default:"#" }}' target="_blank">
+                <img
+                  src="{% static 'main/assets/icons/facebook_footer.svg' %}"
+                  alt=""
+                />
+            </a>
+        </p>
+        <p class="bg-[#DCE1EA] rounded p-2">
+            <a href='{{ site_settings.linkedin_link|default:"#" }}' target="_blank">
+                <img
+                  src="{% static 'main/assets/icons/linkedin_footer.svg'%}"
+                  alt=""
+                />
+            </a>
+        </p>
+        <p class="bg-[#DCE1EA] rounded p-2">
+            <a href='{{ site_settings.twitter_link|default:"#" }}' target="_blank">
+                <img src="{% static 'main/assets/icons/twitter_footer.svg' %}" alt="" />
+            </a>
+        </p>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,289 @@
+{% load static %} {% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="{% static 'main/assets/favicon.svg' %}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucard - Pre-register now</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="overflow-x-hidden font-medium text-text-black">
+    <main class="flex gap-4">
+      <div
+        class="hidden success-section"
+        style="
+          position: absolute;
+          top: 20px;
+          left: 40%;
+          background: #12db63;
+          padding: 10px 20px;
+          border-radius: 10px;
+          color: #fff;
+        "
+      >
+        <div id="success-message"></div>
+      </div>
+      <section
+        class="flex justify-center w-full mx-4 mt-10 sm:ml-16 lg:mr-0 sm:mr-32 sm:mt-20 lg:w-6/12"
+      >
+        <div class="w-full lg:max-w-md">
+          <div class="flex items-center justify-between">
+            <div>
+              <a href="{% url 'home' %}">
+                <button
+                  class="font-normal whitespace-nowrap flex justify-center items-center gap-2.5"
+                >
+                  <span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.99996 18.3334C14.6023 18.3334 18.3333 14.6025 18.3333 10.0001C18.3333 5.39771 14.6023 1.66675 9.99996 1.66675C5.39759 1.66675 1.66663 5.39771 1.66663 10.0001C1.66663 14.6025 5.39759 18.3334 9.99996 18.3334Z"
+                        stroke="#535861"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.05 12.9417L8.1167 10L11.05 7.05835"
+                        stroke="#535861"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  {% blocktranslate %}Back homepage{% endblocktranslate %}
+                </button></a
+              >
+            </div>
+            <div class="relative flex items-center justify-center">
+              <button class="cursor-pointer lang-btn">
+                <img
+                  src="{% static 'main/assets/icons/az_flag.svg' %}"
+                  alt=""
+                />
+              </button>
+              <div
+                class="language w-44 absolute font-normal hidden p-6 rounded-md border border-secondary border-opacity-[0.06] top-10 right-0 space-y-8 transition-all animate-down lang-dropdown"
+              >
+                <a
+                  href="#/"
+                  id="AZ"
+                  data-language="az"
+                  class="flex gap-3 cursor-pointer w-fit"
+                >
+                  <img
+                    src="{% static 'main/assets/icons/az_flag.svg' %}"
+                    alt=""
+                  />Azerbaijani
+                </a>
+                <a
+                  href="#/"
+                  id="EN"
+                  data-language="en"
+                  class="flex gap-3 cursor-pointer w-fit"
+                >
+                  <img
+                    src="{% static 'main/assets/icons/en_flag.svg' %}"
+                    alt=""
+                  />English
+                </a>
+                <a
+                  href="#/"
+                  id="RU"
+                  data-language="ru"
+                  class="flex gap-3 cursor-pointer w-fit"
+                >
+                  <img
+                    src="{% static 'main/assets/icons/ru_flag.svg' %}"
+                    alt=""
+                  />Russian
+                </a>
+              </div>
+            </div>
+          </div>
+          <h1 class="mt-[70px] text-secondary text-[32px]">
+            {% blocktranslate %}Pre Registration{% endblocktranslate %}
+          </h1>
+          <p class="mt-3 mb-8 font-normal">
+            {% blocktranslate %}Be the first user{% endblocktranslate %}
+          </p>
+          <form class="space-y-6 font-normal" id="preRegistrationForm">
+            {% csrf_token %}
+            <div class="flex flex-col">
+              <label> {% blocktranslate %}Mail *{% endblocktranslate %}</label>
+              <input
+                type="email"
+                class="font-normal text-sm mt-3 w-full px-6 py-[18px] text-secondary lg:max-w-sm rounded border border-[#E8E8E8] placeholder:text-[#C9CACD] focus:border-primary focus:outline-none"
+                placeholder="example@gmail.com"
+                id="email"
+                name="email"
+              />
+              <div
+                class="hidden error-section"
+                style="color: #ed4611; font-size: 14px"
+              >
+                <div
+                  style="
+                    display: flex;
+                    margin-top: 8px;
+                    align-items: center;
+                    gap: 6px;
+                  "
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.1665 6.66699C9.1665 6.20699 9.53984 5.83366 9.99984 5.83366C10.4598 5.83366 10.8332 6.20699 10.8332 6.66699V10.8337C10.8332 11.2937 10.4598 11.667 9.99984 11.667C9.53984 11.667 9.1665 11.2937 9.1665 10.8337V6.66699ZM9.1665 13.3337C9.1665 12.8737 9.53984 12.5003 9.99984 12.5003C10.4598 12.5003 10.8332 12.8737 10.8332 13.3337C10.8332 13.7937 10.4598 14.167 9.99984 14.167C9.53984 14.167 9.1665 13.7937 9.1665 13.3337ZM9.99975 16.667C6.32392 16.667 3.33309 13.6762 3.33309 10.0003C3.33309 6.32449 6.32392 3.33366 9.99975 3.33366C13.6756 3.33366 16.6664 6.32449 16.6664 10.0003C16.6664 13.6762 13.6756 16.667 9.99975 16.667ZM9.99984 1.66699C5.39734 1.66699 1.6665 5.39783 1.6665 10.0003C1.6665 14.6028 5.39734 18.3337 9.99984 18.3337C14.6023 18.3337 18.3332 14.6028 18.3332 10.0003C18.3332 5.39783 14.6023 1.66699 9.99984 1.66699Z"
+                      fill="#23272F"
+                    />
+                    <mask
+                      id="mask0_809_12080"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="1"
+                      y="1"
+                      width="18"
+                      height="18"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.1665 6.66699C9.1665 6.20699 9.53984 5.83366 9.99984 5.83366C10.4598 5.83366 10.8332 6.20699 10.8332 6.66699V10.8337C10.8332 11.2937 10.4598 11.667 9.99984 11.667C9.53984 11.667 9.1665 11.2937 9.1665 10.8337V6.66699ZM9.1665 13.3337C9.1665 12.8737 9.53984 12.5003 9.99984 12.5003C10.4598 12.5003 10.8332 12.8737 10.8332 13.3337C10.8332 13.7937 10.4598 14.167 9.99984 14.167C9.53984 14.167 9.1665 13.7937 9.1665 13.3337ZM9.99975 16.667C6.32392 16.667 3.33309 13.6762 3.33309 10.0003C3.33309 6.32449 6.32392 3.33366 9.99975 3.33366C13.6756 3.33366 16.6664 6.32449 16.6664 10.0003C16.6664 13.6762 13.6756 16.667 9.99975 16.667ZM9.99984 1.66699C5.39734 1.66699 1.6665 5.39783 1.6665 10.0003C1.6665 14.6028 5.39734 18.3337 9.99984 18.3337C14.6023 18.3337 18.3332 14.6028 18.3332 10.0003C18.3332 5.39783 14.6023 1.66699 9.99984 1.66699Z"
+                        fill="white"
+                      />
+                    </mask>
+                    <g mask="url(#mask0_809_12080)">
+                      <rect width="20" height="20" fill="#ED4611" />
+                    </g>
+                  </svg>
+                  <span id="error-message"></span>
+                </div>
+              </div>
+            </div>
+            <div class="relative flex flex-col">
+              <label class="text-secondary">
+                {% blocktranslate %}Fəaliyət sahəniz{% endblocktranslate %}
+                ({%blocktranslate %}optional{% endblocktranslate %})
+              </label>
+              <div
+                class="font-normal cursor-pointer flex justify-between items-center text-sm mt-3 w-full stroke-secondary px-6 py-[18px] lg:max-w-sm rounded border border-text-black focus:outline-none list-field"
+              >
+                <input
+                  class="keyword-selected"
+                  type="button"
+                  id="category"
+                  name="category"
+                  value="Seçin"
+                />
+                <!-- rotate-180 rotate-0 -->
+                <svg
+                  class="transition-all list-arrow"
+                  width="12"
+                  height="7"
+                  viewBox="0 0 12 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.29297 1.1875L5.99964 5.88083L10.7063 1.1875"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div
+                class="p-4 w-full lg:max-w-sm rounded border bg-white border-[#C4C4C4] absolute top-[102px] hidden animate-drop list-dropdown"
+              >
+                <div
+                  class="stroke-secondary w-full lg:max-w-sm flex border-b gap-4 border-[#C4C4C4] items-center rounded pb-4 border-opacity-25"
+                >
+                  <span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.58317 17.4993C13.9554 17.4993 17.4998 13.9549 17.4998 9.58268C17.4998 5.21043 13.9554 1.66602 9.58317 1.66602C5.21092 1.66602 1.6665 5.21043 1.6665 9.58268C1.6665 13.9549 5.21092 17.4993 9.58317 17.4993Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18.3332 18.3327L16.6665 16.666"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg></span
+                  ><input
+                    type="text"
+                    class="w-full keyword-search focus:outline-none placeholder:text-[#C9CACD]"
+                    placeholder="Search"
+                  />
+                </div>
+                <ul
+                  class="flex flex-col gap-4 pt-4 overflow-x-hidden overflow-y-auto break-words keyword-list max-h-36"
+                >
+                  {% for category in categories %}
+                  <li
+                    class="w-64 py-1 transition-all cursor-pointer keyword hover:translate-x-4 hover:pl-4"
+                  >
+                    {{ category.name }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <button
+              id="btnSubmit"
+              type="submit"
+              class="flex font-semibold justify-center items-center w-full lg:max-w-sm py-4 rounded-[5px] bg-[#12DB63] bg-opacity-50 hover:bg-opacity-100 text-white"
+            >
+              {% blocktranslate %}Here we go!{% endblocktranslate %}
+            </button>
+          </form>
+        </div>
+      </section>
+      <section
+        class="items-start justify-center hidden h-full min-h-screen px-4 bg-primary lg:flex lg:pr-12 lg:w-7/12"
+      >
+        <img
+          class="w-full pl-8 mt-32 bg-cover 2xl:w-6/12"
+          src="{% static 'main/assets/images/register_frame.svg' %}"
+          alt=""
+        />
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="{% static 'main/js/preRegister.js' %}"></script>
+    <script defer src="{% static 'main/js/main.js' %}"></script>
+  </body>
+</html>

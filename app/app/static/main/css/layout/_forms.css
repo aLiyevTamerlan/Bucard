@@ -1,0 +1,30 @@
+input,
+textarea {
+  padding: 16px;
+  /* margin-bottom: 16px; */
+}
+input {
+  height: 50px;
+}
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+}
+
+input::placeholder {
+  color: #23272f40;
+}
+label {
+  font-size: 16px;
+  color: var(--colorTextSecondary);
+  margin-bottom: 8px;
+}
+.link__forgot_password {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+#password {
+  margin-bottom: 8px !important;
+}

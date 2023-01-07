@@ -1,0 +1,151 @@
+.container {
+  padding: 0 !important;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title,
+h1 {
+  font-size: 3rem;
+  width: 600px;
+  font-weight: 700;
+  letter-spacing: 0.015rem;
+  color: var(--colorTextPrim);
+}
+
+.subtitle,
+h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.015rem;
+  color: var(--colorTextPrim);
+}
+
+.text,
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--colorTextPrim);
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.05);
+}
+
+.btnPrimary {
+  border: 1px solid var(--colorPrimary);
+  background-color: var(--colorPrimary);
+  color: #fff;
+  border-radius: 4px;
+  height: 3rem;
+  padding: 13px 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPrimary:hover {
+  background-color: var(--blueBtnHover);
+  color: #fff !important;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+}
+
+.btnSecondary {
+  border: 1px solid var(--colorSecondary);
+  background-color: var(--colorSecondary);
+  color: #fff;
+  border-radius: 4px;
+  padding: 13px 31px;
+  height: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.btnSecondary:hover {
+  opacity: 1;
+  background-color: var(--greenBtnHover);
+  color: #fff !important;
+}
+
+.btnWhite {
+  height: 3rem;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: var(--colorPrimary) !important;
+  border-radius: 4px;
+  padding: 13px 31px;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnWhite:hover {
+  background-color: var(--whiteBtnHover);
+}
+
+.btnWhiteBlue {
+  height: 3rem;
+  border: 1px solid var(--colorPrimary);
+  background-color: #fff;
+  color: var(--colorPrimary) !important;
+  border-radius: 4px;
+  padding: 13px 31px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnWhiteBlue:hover {
+  background-color: var(--blueBtnHover);
+  color: #fff !important;
+}
+
+.btnWhiteBlue.active {
+  background-color: var(--colorPrimary);
+  color: #fff !important;
+}
+
+.btnWhite:disabled {
+  opacity: 0.5;
+}
+
+.btnWhite.active {
+  background-color: var(--greenBtnHover);
+  color: #fff !important;
+}
+
+.checkmark {
+  margin-right: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+/* .register_left .btnWhite{
+width: auto;
+} */
+
+.text-blue {
+  color: #115eed;
+}

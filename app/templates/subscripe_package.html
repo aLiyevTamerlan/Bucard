@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="{% static 'main/assets/favicon.svg' %}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-medium">
+    <div>
+        <header class="w-11/12 sm:px-14 mx-auto h-[72px]">
+            <div class="flex items-center justify-between w-full h-full gap-4">
+                <div>
+                    <img src="{% static 'main/assets/images/buca_logo.svg' %}" alt="" /></div>
+            </div>
+        </header>
+        <main>
+            <section class="w-full">
+                <div class="w-11/12 py-5 sm:px-14 mx-auto flex justify-between flex-col">
+                    <div class="mb-5 flex lg:flex-row flex-col justify-between">
+                        <h2
+                            class="title font-bold text-2xl md:text-3xl w-64 md:w-96 mb-6 lg:mb-0 whitespace-normal md:whitespace-nowrap lg:whitespace-normal">
+                            Xəyalındakı biznes profilini yarat!
+                        </h2>
+                        <div class="border-collapse flex items-center">
+                            <button
+                                class="px-6 sm:px-8 py-2 sm:py-2.5 bg-primary text-white text-sm sm:text-base btn-personal w-full lg:w-fit transition-all duration-300 animate-fadeIn">
+                                Personal
+                            </button>
+                            <button
+                                class="sm:pl-[34px] px-5 bg-white text-primary whitespace-nowrap text-sm sm:text-base sm:pr-8 py-2 sm:py-2.5 btn-business stroke-primary w-full lg:w-fit transition-all duration-300 animate-fadeIn">
+                                <span>
+                                    <svg class="w-5 sm:w-6" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.1997 9.5L12.9997 13.7L11.3997 11.3L8.19971 14.5" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M15.1992 9.5H17.1992V11.5" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M9.7002 22H15.7002C20.7002 22 22.7002 20 22.7002 15V9C22.7002 4 20.7002 2 15.7002 2H9.7002C4.7002 2 2.7002 4 2.7002 9V15C2.7002 20 4.7002 22 9.7002 22Z"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                Bucard Business
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-4 pricing transition-all animate-fadeIn">
+                        <div class="p-6 pt-8 h-fit bg-primary text-white rounded">
+                            <div class="space-y-[18px] mb-6">
+                                <h3 class="font-semibold text-2xl lg:text-[32px]">
+                                    Free to start!
+                                </h3>
+                                <p class="text-2xl lg:text-[32px]">0₼</p>
+                                <p class="font-normal text-sm">Əlaqələri genişləndir</p>
+                            </div>
+                            <div class="h-[1px] w-full bg-white mb-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#FFFFFF" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+                                    </span>
+                                    Kontaktları əldə etmək
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#FFFFFF" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+                                    </span>
+                                    Mənim qutum
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#FFFFFF" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+                                    </span>
+                                    Axtarış
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-6 pt-8 h-fit border border-opacity-10 border-primary rounded">
+                            <div class="space-y-3 mb-6">
+                                <h3 class="text-base lg:text-lg text-primary">
+                                    Standart
+                                </h3>
+                                <p class="text-2xl lg:text-[32px]">1.89₼</p>
+                                <p class="font-normal text-text-black text-sm">Əlaqələri genişləndir</p>
+                            </div>
+                            <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontaktları əldə etmək
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Mənim qutum
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Axtarış
+                                </li>
+                            </ul>
+                            <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+                                    </span>
+                                    Profil
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontakt məlumatları
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Sosyal Medya linkləri
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-6 pt-8 h-fit border border-opacity-10 border-primary rounded">
+                            <div class="space-y-3 mb-6">
+                                <h3 class="text-base lg:text-lg text-primary">
+                                    Pro
+                                </h3>
+                                <p class="text-2xl lg:text-[32px]">4.89₼</p>
+                                <p class="font-normal text-text-black text-sm">Əlaqələri genişləndir</p>
+                            </div>
+                            <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontaktları əldə etmək
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Mənim qutum
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Axtarış
+                                </li>
+                            </ul>
+                            <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+                                    </span>
+                                    Profil
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontakt məlumatları
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Sosyal Medya linkləri
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    1 məkan əlavə etmə
+                                </li>
+                            </ul>
+                            <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+                                    </span>
+                                    Profil
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Haqqında
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Axtarış sistemində mövcud olmaq
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-4 pricing hidden transition-all animate-fadeIn">
+                        <div class="rounded hidden lg:block">
+                            <img class="" src="{% static 'main/assets/images/pricing.svg' %}" alt="">
+                        </div>
+                        <div class="p-6 pt-8 h-fit border border-opacity-10 border-primary rounded">
+                            <div class="space-y-3 mb-6">
+                                <h3 class="text-base lg:text-lg text-primary">
+                                    Business
+                                </h3>
+                                <p class="text-2xl lg:text-[32px]">8.89₼</p>
+                                <p class="font-normal text-text-black text-sm">Əlaqələri genişləndir</p>
+                            </div>
+                            <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontaktları əldə etmək
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Mənim qutum
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Axtarış
+                                </li>
+                            </ul>
+                            <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+                                    </span>
+                                    Profil
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontakt məlumatları
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Şirkət məlumatları
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Sosyal Medya linkləri
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    2 ünvan əlavə etmə
+                                </li>
+                            </ul>
+                            <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+                                    </span>
+                                    Haqqında
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    5 portfolio linki
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    5 servis və ya xidmət linki
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Axtarış sistemində mövcud olmaq.
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="p-6 pt-8 h-fit border border-opacity-10 border-primary rounded">
+                            <div class="space-y-3 mb-6">
+                                <h3 class="text-base lg:text-lg text-primary">
+                                    Business
+                                </h3>
+                                <p class="text-2xl lg:text-[32px]">11.89₼</p>
+                                <p class="font-normal text-text-black text-sm">Əlaqələri genişləndir</p>
+                            </div>
+                            <div class="h-[1px] w-full bg-border-secondary mb-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontaktları əldə etmək
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Mənim qutum
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Axtarış
+                                </li>
+                            </ul>
+                            <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+                                    </span>
+                                    Profil
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Kontakt məlumatları
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Şirkət məlumatları
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Sosyal Medya linkləri
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    <p class="flex gap-1"><span class="text-primary">10 ünvan</span> əlavə etmə</p>
+                                </li>
+                            </ul>
+                            <div class="h-[1px] w-full bg-border-secondary my-6"></div>
+                            <ul class="space-y-3 mb-4">
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+                                    </span>
+                                    Haqqında
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    <p class="flex gap-1"><span class="text-primary">Limitsiz</span>portfolio</p>
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    <p class="flex gap-1"><span class="text-primary">Limitsiz</span>servis və ya xidmət
+                                    </p>
+                                </li>
+                                <li class="flex gap-4 items-center">
+                                    <span>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                fill="#12DB63" />
+                                            <mask id="mask0_805_10590" style="mask-type:alpha"
+                                                maskUnits="userSpaceOnUse" x="3" y="6" width="17" height="12">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.86326 17.9999C9.58726 17.9999 9.32326 17.8859 9.13426 17.6849L4.27126 12.5059C3.89226 12.1039 3.91326 11.4709 4.31526 11.0929C4.71826 10.7149 5.35126 10.7349 5.72826 11.1369L9.85326 15.5279L18.2613 6.32587C18.6353 5.91687 19.2673 5.88987 19.6753 6.26187C20.0823 6.63387 20.1103 7.26687 19.7383 7.67387L10.6013 17.6739C10.4143 17.8799 10.1483 17.9979 9.87026 17.9999H9.86326Z"
+                                                    fill="white" />
+                                            </mask>
+                                        </svg>
+
+
+                                    </span>
+                                    Axtarış sistemində mövcud olmaq.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js">
+    </script>
+    <script defer src="{% static 'main/js/script.js' %}"></script>
+</body>
+
+
+
+</html>

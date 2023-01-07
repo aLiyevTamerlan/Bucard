@@ -1,0 +1,143 @@
+.main__blue_section {
+  background-image: url("/assets/media/search_bg.svg");
+  height: 340px;
+  width: 100%;
+}
+
+.main__blue_section img {
+  margin: auto;
+  bottom: -38px;
+  z-index: 1;
+}
+
+.main__text {
+  padding-top: 12%;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  z-index: 2;
+}
+
+.main__text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: auto;
+  color: #fff;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  width: 60%;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -7%;
+  background: #fff;
+  border: 1px solid rgba(17, 94, 237, 0.06);
+  box-shadow: 0px 0px 12px rgba(17, 94, 237, 0.06);
+  border-radius: 4px;
+}
+
+.search-icon {
+  margin-left: 5px;
+}
+
+.search-icon:hover {
+  cursor: pointer;
+}
+
+.location {
+  min-width: 100px;
+  margin: 0 10px;
+}
+
+.location > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#search {
+  min-width: 360px;
+  width: 100%;
+  color: #000;
+  margin: 0;
+  border: 0;
+}
+
+#search::placeholder {
+  color: #c0c5cf;
+  font-size: 16px;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.vl {
+  margin: 0 5px;
+  border-left: 1px solid #115eed;
+  opacity: 0.12;
+  height: 40px;
+}
+
+.keywords {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0;
+}
+
+.keyword {
+  display: flex;
+  gap: 4px;
+  background: rgba(17, 94, 237, 0.03);
+  border-radius: 6px;
+  color: #115eed;
+  padding: 12px 20px;
+  border-radius: 6px;
+}
+
+.keyword:hover {
+  background: rgba(17, 94, 237, 0.1);
+}
+
+.keyword-selected {
+  white-space: nowrap;
+  display: flex;
+  gap: 4px;
+  background: rgba(17, 94, 237, 0.03);
+  border-radius: 6px;
+  color: #115eed;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.keywords-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 100px;
+}
+
+.keywords-container > button {
+  margin: 10px;
+}
+
+.search-keywords {
+  margin-left: 15px;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+
+.keyword-delete {
+  cursor: pointer;
+}
